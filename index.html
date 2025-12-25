@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Harsath SP | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial}
+body{background:#f4f6f8;color:#2b2e34;scroll-behavior:smooth}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;width:100%;
+background:#ffffff;
+padding:12px 40px;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+z-index:100;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+nav b{
+color:#0f766e;
+font-size:20px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+nav b img{
+width:32px;
+height:32px;
+border-radius:50%;
+border:2px solid #0f766e;
+}
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+nav ul li a{
+text-decoration:none;
+color:#0f766e;
+font-weight:500;
+position:relative;
+padding:4px 0;
+transition:0.3s;
+}
+nav ul li a::after{
+content:'';
+position:absolute;
+left:0;bottom:0;
+width:0%;height:2px;
+background:#5eead4;
+transition:0.3s;
+}
+nav ul li a:hover::after{
+width:100%;
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:120px 8%;
+gap:40px;
+background:linear-gradient(135deg,#1f2937,#374151);
+color:#fff;
+scroll-margin-top:80px;
+}
+.hero h1{font-size:44px;color:#5eead4}
+.hero p{margin:15px 0;font-size:16px;color:#e5e7eb}
+.hero img{
+width:230px;height:230px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #5eead4;
+animation:float 3s ease-in-out infinite;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:10px 22px;
+color:#ffffff;
+border-radius:6px;
+text-decoration:none;
+font-weight:500;
+margin-top:18px;
+transition:0.3s;
+}
+.linkedin{background:#0f766e;}
+.linkedin:hover{background:#115e59;}
+.resume{background:#5eead4;color:#000;}
+.resume:hover{background:#34d9c0;}
+
+/* SECTION */
+section{
+padding:90px 8%;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+section.active{
+opacity:1;
+transform:translateY(0);
+}
+h2{
+color:#0f766e;
+margin-bottom:22px;
+font-size:28px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:26px;
+}
+
+/* CARD */
+.card{
+background:#ffffff;
+padding:26px;
+border-radius:14px;
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
+transition:transform 0.3s;
+}
+.card:hover{transform:translateY(-6px)}
+
+/* SKILLS */
+.skill{
+display:inline-block;
+background:#e6fffa;
+color:#0f766e;
+padding:8px 14px;
+border-radius:6px;
+margin:6px;
+font-weight:500;
+}
+
+/* FOOTER */
+footer{
+background:#1f2937;
+color:#e5e7eb;
+text-align:center;
+padding:20px;
+}
+
+/* FLOAT HERO IMAGE */
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<b><img src="harsath.jpeg" alt="Avatar"> Harsath SP</b>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#internships">Internships</a></li>
+</ul>
+</nav>
+
+<div class="hero" id="hero">
+<div>
+<h1>Harsath SP</h1>
+<p>CSE Student & Aspiring Full-Stack Developer<br>
+HTML • CSS • JavaScript • Java • MySQL</p>
+<a class="btn linkedin" href="https://www.linkedin.com/in/harsath2005" target="_blank">LinkedIn</a>
+<a class="btn resume" href="HARSATH_SP.pdf" download>Download Resume</a>
+</div>
+<img src="harsath.jpeg" alt="Harsath SP">
+</div>
+
+<section class="reveal" id="education">
+<h2>Education</h2>
+<div class="card">
+<b>B.E – Computer Science & Engineering</b><br>
+Velalar College of Engineering and Technology<br>
+CGPA: 7.92
+</div>
+</section>
+
+<section class="reveal" id="skills">
+<h2>Skills</h2>
+<div class="card">
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Java</span>
+<span class="skill">MySQL</span>
+<span class="skill">C</span>
+<span class="skill">Responsive Design</span>
+<span class="skill">Canva</span>
+</div>
+</section>
+
+<section class="reveal" id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card">
+<b>E-Commerce Website</b><br>
+<a class="btn linkedin" href="YOUR_GITHUB_LINK" target="_blank">View Project</a>
+</div>
+<div class="card">
+<b>Connect Four Game</b><br>
+<a class="btn linkedin" href="YOUR_GITHUB_LINK" target="_blank">View Project</a>
+</div>
+<div class="card">
+<b>Web Calculator</b><br>
+<a class="btn linkedin" href="YOUR_GITHUB_LINK" target="_blank">View Project</a>
+</div>
+</div>
+</section>
+
+<section class="reveal" id="internships">
+<h2>Internships</h2>
+<div class="grid">
+<div class="card">InternPe – Web Development</div>
+<div class="card">CodSoft – Web Development</div>
+<div class="card">Cognifyz – Web Development</div>
+</div>
+</section>
+
+<footer>
+© 2025 Harsath SP | Portfolio
+</footer>
+
+<script>
+// Scroll Reveal Animation
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".reveal").forEach(el=>{
+let top=el.getBoundingClientRect().top;
+if(top < window.innerHeight-100){el.classList.add("active");}
+});
+});
+</script>
+
+</body>
+</html>
